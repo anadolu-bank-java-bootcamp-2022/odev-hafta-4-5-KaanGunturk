@@ -25,6 +25,7 @@ public class ProductRepository {
     }
 
     public List<Product> getAll() {
+        // BU METHODU 1. GOREV ICIN DOLDURUNUZ
         final String SQL = "SELECT id, name, description FROM public.product";
         List<Product> products = new ArrayList<>();
         try (PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(SQL)) {

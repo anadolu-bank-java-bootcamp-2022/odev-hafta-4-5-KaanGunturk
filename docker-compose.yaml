@@ -3,8 +3,8 @@ services:
   db:
     image: postgres:13.6
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=toor
       - POSTGRES_DB=swapper
     ports:
       - "5330:5432"
