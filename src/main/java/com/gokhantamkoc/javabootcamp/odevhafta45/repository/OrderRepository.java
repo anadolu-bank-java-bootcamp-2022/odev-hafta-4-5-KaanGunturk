@@ -97,7 +97,7 @@ public class OrderRepository {
 
     public List<OrderDetail> getOrderDetails(long orderId) {
         // BU METHODU 2. GOREV ICIN DOLDURUNUZ
-        final String SQL = "SELECT * FROM public.order_detail where id = ? limit 1;";
+        final String SQL = "SELECT * FROM public.order_detail where order_id = ? ";
         List<OrderDetail> orderDetails = new ArrayList<>();
         try (PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(SQL)) {
             preparedStatement.setLong(1, orderId);
